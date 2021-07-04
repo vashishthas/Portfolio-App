@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                       alignment: Alignment.topLeft,
                       child: Text(
                         "Skills",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.headline5,
                       ),
                     ),
                   ),
