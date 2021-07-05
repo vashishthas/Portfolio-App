@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/screens/home.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await FlutterDownloader.initialize(
+  //   debug: false
+  // );
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

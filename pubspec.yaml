@@ -23,9 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  advance_pdf_viewer: ^2.0.0
   cupertino_icons: ^1.0.2
+  flutter_downloader: ^1.6.1
   flutter_svg: ^0.22.0
   google_fonts: ^2.1.0
+  path_provider: ^2.0.2
+  permission_handler: ^8.1.2
+  url_launcher: ^6.0.8
 
 dev_dependencies:
   flutter_test:
