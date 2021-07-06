@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 // import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:path_provider/path_provider.dart';
 // import 'package:permission_handler/permission_handler.dart';
 import 'package:portfolio/constants.dart';
@@ -59,9 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    AreaTextInfo(title: "Residence", text: "India"),
-                    AreaTextInfo(title: "City", text: "Lucknow"),
-                    AreaTextInfo(title: "Age", text: "21"),
+                    AreaTextInfo(title: "College", text: "SRM, Chennai"),
+                    AreaTextInfo(title: "Stream", text: "B Tech - CSE"),
+                    AreaTextInfo(title: "Residence", text: "Lucknow"),
                     Divider(),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -104,12 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           LinearProgress(
                             text: "Java",
-                            percentage: 0.68,
+                            percentage: 0.72,
                             hideProgress: _hideProgress,
                           ),
                           LinearProgress(
                             text: "Git",
-                            percentage: 0.70,
+                            percentage: 0.74,
                             hideProgress: _hideProgress,
                           ),
                           LinearProgress(
@@ -132,7 +132,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Divider(),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -150,7 +151,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         Theme.of(context).textTheme.subtitle1),
                               )),
                           // IconButton(
-                          //   onPressed: () {},
+                          //   onPressed: () {
+                          //     // downloadFile();
+                          //   },
                           //   icon: SvgPicture.asset("assets/icons/download.svg"),
                           // )
                         ],
@@ -171,9 +174,27 @@ class _HomeScreenState extends State<HomeScreen> {
                         SocialButton(
                             img: "assets/icons/github.svg",
                             url: "https://github.com/vashishthas"),
-                        Spacer()
+                        Spacer(),
                       ]),
-                    )
+                    ),
+                    // Divider(),
+                    SizedBox(height: 10),
+                    Container(
+                        child: Row(
+                      children: [
+                        Spacer(),
+                        Icon(
+                          Icons.mail,
+                          color: Colors.grey,
+                        ),
+                        Spacer(),
+                        Text(
+                          "vashishthasiyaram@gmail.com",
+                          style: Theme.of(context).textTheme.subtitle2,
+                        ),
+                        Spacer()
+                      ],
+                    )),
                   ],
                 ),
               ),
@@ -184,23 +205,25 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // void downloadFile() async {
-  //   final status = await Permission.storage.request();
-  //   if (status.isGranted) {
-  //     final extDir = await getExternalStorageDirectory();
-  //     final id = await FlutterDownloader.enqueue(
-  //       url:
-  //           // "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
-  //           "https://drive.google.com/file/d/153XmShDSaZFSXlZDEkULU1_r1q3B3zDb/view?usp=sharing",
-  //       savedDir: extDir!.path,
-  //       fileName: 'Resume',
-  //       showNotification: true,
-  //       openFileFromNotification: true,
-  //     );
-  //   } else {
-  //     print("Permission denided");
-  //   }
-  // }
+//   void downloadFile() async {
+//     final status = await Permission.storage.request();
+//     if (status.isGranted) {
+//       final extDir = await getApplicationDocumentsDirectory();
+//       print(extDir);
+//       final id = await FlutterDownloader.enqueue(
+//         url:
+//             "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+//         // "https://drive.google.com/file/d/153XmShDSaZFSXlZDEkULU1_r1q3B3zDb/view?usp=sharing",
+//         savedDir: extDir.path,
+//         fileName: 'resume',
+//         showNotification: true,
+//         openFileFromNotification: true,
+//       );
+//       print(id);
+//     } else {
+//       print("Permission denided");
+//     }
+//   }
 }
 
 class AreaTextInfo extends StatelessWidget {
