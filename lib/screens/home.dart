@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         Expanded(
                             child: CircularProgress(
-                                percentage: 0.72, text: "Flask")),
+                                percentage: 0.72, text: "Firebase")),
                       ],
                     ),
                     Divider(),
